@@ -1,0 +1,10 @@
+.example-card {
+    min-width: 250px;
+    max-width: 600px;
+  }
+  
+  .example-header-image {
+    background-image: url('../../../dating/src/assets/images/me.jpg');
+    background-size: cover;
+  }
+  
