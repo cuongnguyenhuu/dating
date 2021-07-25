@@ -132,6 +132,7 @@
           _classCallCheck(this, _AppComponent);
 
           this.images = ["https://scontent-hkg4-1.xx.fbcdn.net/v/t1.15752-9/210114652_374093354071388_6997650203568635632_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=ae9488&_nc_ohc=-GqsfMXSZSAAX9omYVv&_nc_ht=scontent-hkg4-1.xx&oh=764bfcb584e50afc227a5af38f16d94c&oe=6123A4AB", "https://scontent-hkt1-2.xx.fbcdn.net/v/t1.15752-9/157864742_195089051954148_77811095995198372_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=ae9488&_nc_ohc=MJDp1FASPjcAX_muvTO&_nc_ht=scontent-hkt1-2.xx&oh=729368d89a4518ee9a38d35f1af6d8c4&oe=60FD4646", "https://scontent-hkg4-1.xx.fbcdn.net/v/t1.15752-9/161728195_208066584406644_9179322075528897974_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=ae9488&_nc_ohc=tpDjxh6AP-QAX8AZ8Nn&_nc_ht=scontent-hkg4-1.xx&oh=a22776ab68d1ff9cc6924033bffd9943&oe=60FD7699", "https://scontent-hkt1-1.xx.fbcdn.net/v/t1.15752-9/211801267_953617795182176_2964638749707447320_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=ae9488&_nc_ohc=zDhDAZxUZLYAX_urIcn&tn=J23Wi5DriEvRae87&_nc_ht=scontent-hkt1-1.xx&oh=73d1badc55fa7f315b12e8377c3dda52&oe=60FD17A3", "https://scontent-hkt1-2.xx.fbcdn.net/v/t1.15752-9/134056259_1577661659088742_1169921139806117259_n.jpg?_nc_cat=104&ccb=1-3&_nc_sid=ae9488&_nc_ohc=K1OUxUOIdNEAX8ndY1J&_nc_ht=scontent-hkt1-2.xx&oh=6527ea2b55ca313cdd2f04340872ef51&oe=60FD7DB4", "https://scontent-hkt1-2.xx.fbcdn.net/v/t1.15752-9/215219702_186893510076214_525854707597137388_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=ae9488&_nc_ohc=Isev0dimoaUAX9pc5dx&_nc_ht=scontent-hkt1-2.xx&oh=021b10adfa54524e0585803775425728&oe=60FD45ED", "https://scontent-hkt1-2.xx.fbcdn.net/v/t1.15752-9/213078628_504447047283218_8251220788384455421_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=ae9488&_nc_ohc=HKN1wjS_7ncAX_8ben5&_nc_ht=scontent-hkt1-2.xx&oh=22699b63df442bf3d58cdfd4984f1f6f&oe=60FD7A47"];
+          this.strings = ["C\u1EE5c c\u01B0ng \xE0!\n     H\xF4m nay l\xE0 1 ng\xE0y \u0111\u1EB7t bi\u1EC7t. L\xFAc tr\u01B0\u1EDBc th\xEC l\xE0 \u0111\u1EB7t bi\u1EC7t v\u1EDBi em nh\u01B0ng b\xE2y gi\u1EDD n\xF3 r\u1EA5t \u0111\u1EB7t bi\u1EC7t v\u1EDBi anh.", "Anh biết anh chưa làm em cảm thấy an toàn. Những lời a nói nó không ngọt ngào, không cuốn hút nhưng nó xuất phát từ sự chân thành của anh.", "Đến bây giờ anh vẫn chưa tin được rằng em đã cho anh có cơ hội để được bên em, chăm sóc em, yêu thương em. Những thứ mà a chưa từng được cảm nhận bao giờ.", "Anh luôn muốn tạo cho em những bất ngờ, nó không chỉ thể hiện tình cảm của anh dành cho em mà anh còn muốn em luôn vui cười mỗi ngày.", "Có những lúc đôi ta giận nhau, những lúc đó anh cực kỳ quý trọng vì nó là cơ hội để chúng ta hiểu nhau hơn sau những cuộc nói chuyện.", "Không phải đổ lỗi do dịch, nhưng a cũng muốn làm 1 điều gì đó đặt biệt cho em trong ngày sinh nhật đầu tiên anh có mặt này (Còn quà thì sau dịch nhaaaa)", "Chúc mừng sinh nhật em, chúc cục cưng của anh tuổi mới tràn đầy năng lượng, xinh đẹp, thành công và chăm sóc bản thân mình hơn nhaaaa."];
           this.index = 0;
           this.title = 'dating';
         }
@@ -147,7 +148,8 @@
           value: function playAudio() {
             var audio = new Audio();
             audio.src = "../../../assets/test.mp3";
-            audio.load(); // audio.play();
+            audio.load();
+            audio.play();
           }
         }, {
           key: "next",
@@ -170,9 +172,9 @@
       _AppComponent.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
         type: _AppComponent,
         selectors: [["app-root"]],
-        decls: 33,
-        vars: 4,
-        consts: [[1, "container-fluid"], [2, "padding-top", "30px", "color", "rgb(255, 255, 255)"], [1, "row"], [2, "text-align", "center", "width", "100%", "font-weight", "bold"], [1, ""], [1, "", 2, "display", "flex", "align-items", "center", "justify-content", "center", "padding-top", "200px", "margin", "10px"], [1, "example-card"], [1, "example-card", 2, "position", "fixed", "width", "90%", "height", "400px", "background", "#00000047"], ["mat-card-avatar", "", 1, "example-header-image"], [1, "col"], ["mat-card-image", "", "alt", "Photo of a Shiba Inu", "height", "250", 2, "object-fit", "contain", 3, "src"], [2, "margin-left", "50%"], ["mat-button", ""], ["mat-button", "", 3, "click"]],
+        decls: 35,
+        vars: 5,
+        consts: [[1, "container-fluid"], [2, "padding-top", "30px", "color", "rgb(255, 255, 255)"], [1, "row"], [2, "text-align", "center", "width", "100%", "font-weight", "bold"], [1, "row", 2, "display", "block"], [1, ""], [1, "", 2, "display", "flex", "align-items", "center", "justify-content", "center", "padding-top", "220px", "margin", "10px"], [1, "example-card"], [1, "example-card", 2, "position", "fixed", "width", "90%", "height", "500px", "background", "#0000002e"], ["mat-card-avatar", "", 1, "example-header-image"], [1, "col"], ["mat-card-image", "", "alt", "Photo of a Shiba Inu", "height", "300", 2, "object-fit", "contain", 3, "src"], [2, "white-space", "break-spaces", "font-family", "monospace"], [1, "row", 2, "justify-content", "center"], ["mat-button", ""], ["mat-button", "", 3, "click"]],
         template: function AppComponent_Template(rf, ctx) {
           if (rf & 1) {
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
@@ -203,73 +205,71 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](8, "br");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](9, "div", 4);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](10, "div", 5);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](11, "mat-card", 6);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "div", 6);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](12, "mat-card", 7);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](12, "mat-card", 7);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "mat-card-header");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "mat-card", 8);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](14, "div", 8);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](14, "mat-card-header");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](15, "mat-card-title");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](15, "div", 9);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](16, "Anh y\xEAu c\u1EE7a e");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "mat-card-title");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](17, "mat-card-subtitle");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "30-Jul-2021");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](17, "Anh y\xEAu c\u1EE7a e");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](18, "mat-card-subtitle");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](19, "div", 2);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "div", 9);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](21, "img", 10);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](22, "div", 9);
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "mat-card-content");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "p");
-
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, " The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting. ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](19, "30-Jul-2021");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](20, "div", 2);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "div", 10);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](22, "img", 11);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "div", 10);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](24, "mat-card-content");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](25, "h3", 12);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](26);
+
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "mat-card-actions", 11);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "div", 13);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](27, "button", 12);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "mat-card-actions");
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](28, "SAI");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "button", 14);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, "KH\xD4NG");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](29, "button", 13);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](31, "button", 15);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AppComponent_Template_button_click_29_listener() {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵlistener"]("click", function AppComponent_Template_button_click_31_listener() {
               return ctx.next();
             });
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](30, "\u0110\xDANG");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](32, "\u0110\u1ED2NG \xDD");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
@@ -279,21 +279,35 @@
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](31, "br");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](32, "br");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](33, "br");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](34, "br");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
           }
 
           if (rf & 2) {
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](11);
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](12);
 
-            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleMapInterpolate1"]("\n    background-image: url(", ctx.images[ctx.index], ");\n    background-size: cover;\n    filter: blur(3px);\n    position: fixed;\n    width: 90%;\n    height: 400px;\n    ");
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵstyleMapInterpolate1"]("\n          background-image: url(", ctx.images[ctx.index], ");\n          background-size: contain;\n          filter: blur(5px);\n          position: fixed;\n          width: 90%;\n          height: 500px;\n          ");
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](10);
 
             _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpropertyInterpolate"]("src", ctx.images[ctx.index], _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵsanitizeUrl"]);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate1"](" ", ctx.strings[ctx.index], " ");
           }
         },
         directives: [_angular_material_card__WEBPACK_IMPORTED_MODULE_1__.MatCard, _angular_material_card__WEBPACK_IMPORTED_MODULE_1__.MatCardHeader, _angular_material_card__WEBPACK_IMPORTED_MODULE_1__.MatCardAvatar, _angular_material_card__WEBPACK_IMPORTED_MODULE_1__.MatCardTitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_1__.MatCardSubtitle, _angular_material_card__WEBPACK_IMPORTED_MODULE_1__.MatCardImage, _angular_material_card__WEBPACK_IMPORTED_MODULE_1__.MatCardContent, _angular_material_card__WEBPACK_IMPORTED_MODULE_1__.MatCardActions, _angular_material_button__WEBPACK_IMPORTED_MODULE_2__.MatButton],
