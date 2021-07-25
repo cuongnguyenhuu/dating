@@ -17,6 +17,17 @@ export class AppComponent implements OnInit {
     "https://scontent-hkt1-2.xx.fbcdn.net/v/t1.15752-9/213078628_504447047283218_8251220788384455421_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=ae9488&_nc_ohc=HKN1wjS_7ncAX_8ben5&_nc_ht=scontent-hkt1-2.xx&oh=22699b63df442bf3d58cdfd4984f1f6f&oe=60FD7A47"
   ]
 
+  strings = [
+    `Cục cưng à!
+     Hôm nay là 1 ngày đặt biệt. Lúc trước thì là đặt biệt với em nhưng bây giờ nó rất đặt biệt với anh.`,
+    "Anh biết anh chưa làm em cảm thấy an toàn. Những lời a nói nó không ngọt ngào, không cuốn hút nhưng nó xuất phát từ sự chân thành của anh.",
+    "Đến bây giờ anh vẫn chưa tin được rằng em đã cho anh có cơ hội để được bên em, chăm sóc em, yêu thương em. Những thứ mà a chưa từng được cảm nhận bao giờ.",
+    "Anh luôn muốn tạo cho em những bất ngờ, nó không chỉ thể hiện tình cảm của anh dành cho em mà anh còn muốn em luôn vui cười mỗi ngày.",
+    "Có những lúc đôi ta giận nhau, những lúc đó anh cực kỳ quý trọng vì nó là cơ hội để chúng ta hiểu nhau hơn sau những cuộc nói chuyện.",
+    "Không phải đổ lỗi do dịch, nhưng a cũng muốn làm 1 điều gì đó đặt biệt cho em trong ngày sinh nhật đầu tiên anh có mặt này (Còn quà thì sau dịch nhaaaa)",
+    "Chúc mừng sinh nhật em, chúc cục cưng của anh tuổi mới tràn đầy năng lượng, xinh đẹp, thành công và chăm sóc bản thân mình hơn nhaaaa."
+  ]
+
   index = 0
 
   ngOnInit(): void {
@@ -29,7 +40,7 @@ export class AppComponent implements OnInit {
     let audio = new Audio();
     audio.src = "../../../assets/test.mp3";
     audio.load();
-    // audio.play();
+    audio.play();
   }
   
   next(){

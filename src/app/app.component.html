@@ -13,54 +13,57 @@
   </div>
     
     <br>
-</div>
-<div class="">
-  <div class="" style="display: flex; align-items: center; justify-content: center; padding-top: 200px; margin: 10px;">
-    <mat-card class="example-card" 
-    style="
-    background-image: url({{images[index]}});
-    background-size: cover;
-    filter: blur(3px);
-    position: fixed;
-    width: 90%;
-    height: 400px;
-    ">
-    </mat-card>
-    <mat-card class="example-card" 
-    style=" 
-    position: fixed;
-    width: 90%;
-    height: 400px;
-    background: #00000047;
-    ">
-      <mat-card-header>
-        <div mat-card-avatar class="example-header-image"></div>
-        <mat-card-title>Anh yêu của e</mat-card-title>
-        <mat-card-subtitle>30-Jul-2021</mat-card-subtitle>
-      </mat-card-header>
-      <div class="row">
-        <div class="col">
-          <img mat-card-image src={{images[index]}} style="object-fit: contain;" alt="Photo of a Shiba Inu" height="250">
+    <div class="row" style="display: block;">
+      <div class="">
+        <div class="" style="display: flex; align-items: center; justify-content: center; padding-top: 220px; margin: 10px;">
+          <mat-card class="example-card" 
+          style="
+          background-image: url({{images[index]}});
+          background-size: contain;
+          filter: blur(5px);
+          position: fixed;
+          width: 90%;
+          height: 500px;
+          ">
+          </mat-card>
+          <mat-card class="example-card" 
+          style=" 
+          position: fixed;
+          width: 90%;
+          height: 500px;
+          background: #0000002e;
+          ">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>Anh yêu của e</mat-card-title>
+              <mat-card-subtitle>30-Jul-2021</mat-card-subtitle>
+            </mat-card-header>
+            <div class="row">
+              <div class="col">
+                <img mat-card-image src={{images[index]}} style="object-fit: contain;" alt="Photo of a Shiba Inu" height="300">
+              </div>
+              <div class="col">
+                <mat-card-content>
+                  <h3 style="white-space: break-spaces; font-family: monospace;">
+                    {{strings[index]}}
+                  </h3>
+                </mat-card-content>
+                <div class="row" style="justify-content: center;">
+                  <mat-card-actions>
+                    <button mat-button >KHÔNG</button>
+                    <button mat-button (click)="next()">ĐỒNG Ý</button>
+                  </mat-card-actions>
+                </div>
+              </div>
+            </div>
+          </mat-card>
         </div>
-        <div class="col">
-          <mat-card-content>
-            <p>
-              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-              A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-              bred for hunting.
-            </p>
-          </mat-card-content>
-        </div>
+      <br>
+      <br>
       </div>
-      <mat-card-actions style="margin-left: 50%;">
-        <button mat-button >SAI</button>
-        <button mat-button (click)="next()">ĐÚNG</button>
-      </mat-card-actions>
-    </mat-card>
-  </div>
-<br>
-<br>
+    </div>
 </div>
+
 <!--
   bánh sinh nhật
    https://i2.wp.com/funimada.com/assets/images/cards/big/bday-410.gif -->
