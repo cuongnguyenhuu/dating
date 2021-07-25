@@ -1,5 +1,31 @@
 <div class="container-fluid">
-  <div style="padding-top: 30px; color: rgb(255, 255, 255);">
+  <div class="row" id="text-birthday" style="display: none;">
+    <h1 style="text-align: center;
+    width: 100%;
+    padding-top: 30px;
+    font-weight: bold;
+    font-family: cursive;
+    color: orangered;">
+      HAPPY BIRTHDAY MY LOVE
+    </h1>
+    <h1 style="text-align: center;
+    width: 100%;
+    padding-top: 30px;
+    font-weight: bold;
+    font-family: cursive;
+    color: orangered;">
+      WELCOME TO 24 YEARS OLD!
+    </h1>
+    <h1 style="text-align: center;
+    width: 100%;
+    padding-top: 30px;
+    font-weight: bold;
+    font-family: cursive;
+    color: orangered;">
+      DI DI CỦA ANH
+    </h1>
+  </div>
+  <div id="text-welcome" style="padding-top: 30px; color: rgb(255, 255, 255); ">
     <div class="row">
       <h2 style="text-align: center; width: 100%; font-weight: bold;">
         Chào mừng bạn đã đến với chúng tôi!  
@@ -15,7 +41,15 @@
     <br>
     <div class="row" style="display: block;">
       <div class="">
-        <div class="" style="display: flex; align-items: center; justify-content: center; padding-top: 220px; margin: 10px;">
+        <div class="" id="start-area" style="padding-top: 100px; display: flex; align-items: center; justify-content: center; margin: 10px;">
+          <button mat-button (click)="start()" style="    font-size: xxx-large;
+          color: azure;
+          font-family: cursive;">START</button>
+        </div>
+        <div class="" id="birthday-area" style="display: none; align-items: center; justify-content: center; margin: 10px;">
+          <img src="https://media4.giphy.com/media/feio2yIUMtdqWjRiaF/giphy.gif" alt="" width="300px" height="300px">
+        </div>
+        <div class="" id="card-area" style="display: none; align-items: center; justify-content: center; padding-top: 220px; margin: 10px;">
           <mat-card class="example-card" 
           style="
           background-image: url({{images[index]}});
@@ -35,7 +69,7 @@
           ">
             <mat-card-header>
               <div mat-card-avatar class="example-header-image"></div>
-              <mat-card-title>Anh yêu của e</mat-card-title>
+              <mat-card-title style="font-family: cursive;"> From Nemo to DiDi</mat-card-title>
               <mat-card-subtitle>30-Jul-2021</mat-card-subtitle>
             </mat-card-header>
             <div class="row">
@@ -44,7 +78,8 @@
               </div>
               <div class="col">
                 <mat-card-content>
-                  <h3 style="white-space: break-spaces; font-family: monospace;">
+                  <h3 style="white-space: break-spaces; font-family: monospace; font-style: italic;
+                  font-weight: bold;">
                     {{strings[index]}}
                   </h3>
                 </mat-card-content>

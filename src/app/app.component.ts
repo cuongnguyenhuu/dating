@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -24,31 +24,45 @@ export class AppComponent implements OnInit {
     "Đến bây giờ anh vẫn chưa tin được rằng em đã cho anh có cơ hội để được bên em, chăm sóc em, yêu thương em. Những thứ mà a chưa từng được cảm nhận bao giờ.",
     "Anh luôn muốn tạo cho em những bất ngờ, nó không chỉ thể hiện tình cảm của anh dành cho em mà anh còn muốn em luôn vui cười mỗi ngày.",
     "Có những lúc đôi ta giận nhau, những lúc đó anh cực kỳ quý trọng vì nó là cơ hội để chúng ta hiểu nhau hơn sau những cuộc nói chuyện.",
-    "Không phải đổ lỗi do dịch, nhưng a cũng muốn làm 1 điều gì đó đặt biệt cho em trong ngày sinh nhật đầu tiên anh có mặt này (Còn quà thì sau dịch nhaaaa)",
+    "Anh muốn làm 1 điều gì đó đặt biệt cho em trong ngày sinh nhật đầu tiên anh có mặt này để bù đắp lại phần nào cho em (Còn quà thì sau dịch nhaaaa)",
     "Chúc mừng sinh nhật em, chúc cục cưng của anh tuổi mới tràn đầy năng lượng, xinh đẹp, thành công và chăm sóc bản thân mình hơn nhaaaa."
   ]
 
   index = 0
+  audio1 = new Audio()
+  audio2 = new Audio()
 
-  ngOnInit(): void {
-    this.playAudio();
+  ngOnInit(): void {    
+    this.audio1.src = "../../../assets/test.mp3";
+    this.audio1.load();
+    this.audio1.loop = true
+
+    this.audio2.src = "../../../assets/birthday.mp3";
+    this.audio2.load();
+    this.audio2.loop = true
     throw new Error('Method not implemented.');
   }
   title = 'dating';
-  
-  playAudio(){
-    let audio = new Audio();
-    audio.src = "../../../assets/test.mp3";
-    audio.load();
-    audio.play();
+
+  start(){
+    this.audio1.play()
+    document.getElementById("card-area").style.display = "flex"
+    document.getElementById("start-area").style.display = "none"
   }
-  
+
   next(){
     if (this.index == this.images.length - 1) 
     {
-      this.index = 0
+      document.body.style.backgroundImage = "url('https://thumbs.gfycat.com/AcrobaticCleverAegeancat-size_restricted.gif')"
+      document.getElementById("card-area").style.display = "none"
+      document.getElementById("birthday-area").style.display = "flex"
+      document.getElementById("text-welcome").style.display = "none"
+      document.getElementById("text-birthday").style.display = "block"
+      this.audio1.pause();
+      this.audio2.play();
     } else {
       this.index = this.index + 1
+      this.audio1.play()
     }
   }
 }
