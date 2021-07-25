@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --base-href \"/dating/\"",
+    "build": "ng build --prod --base-href \"https://cuongnguyenhuu.github.io/dating/\" -d \"/angularHeader\"",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
