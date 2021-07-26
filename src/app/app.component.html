@@ -4,36 +4,36 @@
     width: 100%;
     padding-top: 30px;
     font-weight: bold;
-    font-family: cursive;
+    font-family: fantasy;
     color: orangered;">
-      HAPPY BIRTHDAY MY LOVE
+      HAPPY BIRTHDAY MY LOVE 🎁
     </h1>
     <h1 style="text-align: center;
     width: 100%;
     padding-top: 30px;
     font-weight: bold;
-    font-family: cursive;
+    font-family: fantasy;
     color: orangered;">
-      WELCOME TO 24 YEARS OLD!
+      WELCOME TO 24 YEARS OLD! ️️🎉
     </h1>
     <h1 style="text-align: center;
     width: 100%;
     padding-top: 30px;
     font-weight: bold;
-    font-family: cursive;
+    font-family: fantasy;
     color: orangered;">
-      DI DI CỦA ANH
+      DI DI CỦA ANH ♥️
     </h1>
   </div>
   <div id="text-welcome" style="padding-top: 30px; color: rgb(255, 255, 255); ">
     <div class="row">
-      <h2 style="text-align: center; width: 100%; font-weight: bold;">
-        Chào mừng bạn đã đến với chúng tôi!  
+      <h2 style="text-align: center; width: 100%; font-weight: bold; font-family: monospace;">
+        Chào mừng bạn đã đến với chúng tôi! 💏
       </h2>
     </div>
     <div class="row" >
-      <h2 style="text-align: center; width: 100%; font-weight: bold;">
-        Web này lập ra để nói yêu Vi rất nhiềuuuuu
+      <h2 style="text-align: center; width: 100%; font-weight: bold; font-family: monospace;">
+        Web này lập ra để nói yêu Vi rất nhiềuuuuu 💕
       </h2>
     </div>
   </div>
@@ -42,39 +42,53 @@
     <div class="row" style="display: block;">
       <div class="">
         <div class="" id="start-area" style="padding-top: 100px; display: flex; align-items: center; justify-content: center; margin: 10px;">
-          <button mat-button (click)="start()" style="    font-size: xxx-large;
-          color: azure;
-          font-family: cursive;">START</button>
+          <div class="col"></div>
+          <div class="col" style="    justify-content: center;
+          align-items: center;
+          display: grid;">
+            <div class="row">
+              <mat-form-field appearance="fill">
+                <mat-label>Nhập tên đầy đủ của anh 😋</mat-label>
+                <input matInput type="text" style="color: snow;" (change)='name=$event.target.value' [value]="name">
+              </mat-form-field>
+            </div>
+            <div class="row">
+              <button mat-button (click)="start()" style="    font-size: xxx-large;
+            color: azure;
+            font-family: cursive;">START</button>
+            </div>
+          </div>
+          <div class="col"></div>
         </div>
         <div class="" id="birthday-area" style="display: none; align-items: center; justify-content: center; margin: 10px;">
           <img src="https://media4.giphy.com/media/feio2yIUMtdqWjRiaF/giphy.gif" alt="" width="300px" height="300px">
         </div>
-        <div class="" id="card-area" style="display: none; align-items: center; justify-content: center; padding-top: 220px; margin: 10px;">
+        <div class="" id="card-area" style="display: none; justify-content: center; position: relative; height: 500px;">
           <mat-card class="example-card" 
           style="
           background-image: url({{images[index]}});
           background-size: contain;
           filter: blur(5px);
-          position: fixed;
+          position: absolute;
           width: 90%;
-          height: 500px;
+          height: 100%;
           ">
           </mat-card>
           <mat-card class="example-card" 
           style=" 
-          position: fixed;
+          position: absolute;
           width: 90%;
-          height: 500px;
+          height: 100%;
           background: #0000002e;
           ">
             <mat-card-header>
               <div mat-card-avatar class="example-header-image"></div>
-              <mat-card-title style="font-family: cursive;"> From Nemo to DiDi</mat-card-title>
+              <mat-card-title style="font-family: cursive;"> From Nemo to DiDi ♥️</mat-card-title>
               <mat-card-subtitle>30-Jul-2021</mat-card-subtitle>
             </mat-card-header>
             <div class="row">
               <div class="col">
-                <img mat-card-image src={{images[index]}} style="object-fit: contain;" alt="Photo of a Shiba Inu" height="300">
+                <img mat-card-image src={{images[index]}} style="object-fit: contain; padding: 10px;" alt="Photo of a Shiba Inu" height="300">
               </div>
               <div class="col">
                 <mat-card-content>
@@ -85,7 +99,7 @@
                 </mat-card-content>
                 <div class="row" style="justify-content: center;">
                   <mat-card-actions>
-                    <button mat-button >KHÔNG</button>
+                    <button mat-button (click)="back()">KHÔNG</button>
                     <button mat-button (click)="next()">ĐỒNG Ý</button>
                   </mat-card-actions>
                 </div>
