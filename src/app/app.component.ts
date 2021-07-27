@@ -1,11 +1,23 @@
+import { animate, state, transition, trigger, style } from '@angular/animations';
 import { AfterViewInit, Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  animations:[
+    trigger('fadeIn', [
+      state('in', style({opacity: '1', filter: "blur(0px)"})),
+      state('out', style({opacity: '0', filter: "blur(10px)"})),
+      transition('* => *', [animate(1000)])
+    ])
+  ]
 })
 export class AppComponent implements OnInit {
+
+  state = 'in'
+  counter = 0
+  enableAnimation = false;
 
   name = ""
   images = [
@@ -54,6 +66,28 @@ Love you ❤️`
   }
   title = 'dating';
 
+  runAnimation() {
+    this.enableAnimation = true
+    this.counter = 0
+    this.toggleState()
+  }
+
+  onDone($event){
+    if(this.enableAnimation) {
+      if (this.counter === 1){
+        this.next()
+      }
+      this.toggleState();
+    }
+  }
+
+  toggleState(){
+    if(this.counter <2){
+      this.state = this.state === 'in' ? 'out' : 'in'
+      this.counter++;
+    }
+  }
+
   start(){
     console.log(this.name);
     
@@ -78,7 +112,7 @@ Love you ❤️`
   next(){
     if (this.index == this.images.length - 1) 
     {
-      document.body.style.backgroundImage = "url('https://thumbs.gfycat.com/AcrobaticCleverAegeancat-size_restricted.gif')"
+      document.getElementById("background-image").style.backgroundImage = "url('https://thumbs.gfycat.com/AcrobaticCleverAegeancat-size_restricted.gif')"
       document.getElementById("card-area").style.display = "none"
       document.getElementById("birthday-area").style.display = "flex"
       document.getElementById("text-welcome").style.display = "none"

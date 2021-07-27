@@ -52,7 +52,7 @@
                 <input matInput type="text" style="color: snow;" (change)='name=$event.target.value' [value]="name">
               </mat-form-field>
             </div>
-            <div class="row">
+            <div class="row" style="justify-content: center;">
               <button mat-button (click)="start()" style="    font-size: xxx-large;
             color: azure;
             font-family: cursive;">START</button>
@@ -63,7 +63,7 @@
         <div class="" id="birthday-area" style="display: none; align-items: center; justify-content: center; margin: 10px;">
           <img src="https://media4.giphy.com/media/feio2yIUMtdqWjRiaF/giphy.gif" alt="" width="300px" height="300px">
         </div>
-        <div class="" id="card-area" style="display: none; justify-content: center; position: relative; height: 500px;">
+        <div [@fadeIn]="state" (@fadeIn.done)="onDone($event)" class="" id="card-area" style="display: none; justify-content: center; position: relative; height: 500px;">
           <mat-card class="example-card" 
           style="
           background-image: url({{images[index]}});
@@ -100,7 +100,7 @@
                 <div class="row" style="justify-content: center;">
                   <mat-card-actions>
                     <button mat-button (click)="back()">KHÔNG</button>
-                    <button mat-button (click)="next()">ĐỒNG Ý</button>
+                    <button mat-button (click)="runAnimation()">ĐỒNG Ý</button>
                   </mat-card-actions>
                 </div>
               </div>

@@ -2,3 +2,29 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+* {
+    box-sizing: border-box;
+  }
+  
+  .background-image {
+    background-image: url('https://i.makeagif.com/media/6-08-2017/rJ9XF_.gif');
+    background-size: cover;
+    display: block;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    height: 800px;
+    left: 0;
+    position: fixed;
+    right: 0;
+    z-index: 1;
+  }
+  
+  .content {
+    border-radius: 3px;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    top: 10px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+  }
