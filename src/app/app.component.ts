@@ -113,6 +113,7 @@ Love you ❤️`
     if (this.index == this.images.length - 1) 
     {
       document.getElementById("background-image").style.backgroundImage = "url('https://thumbs.gfycat.com/AcrobaticCleverAegeancat-size_restricted.gif')"
+      document.getElementById("background-image").style.filter = "blur(0px)"
       document.getElementById("card-area").style.display = "none"
       document.getElementById("birthday-area").style.display = "flex"
       document.getElementById("text-welcome").style.display = "none"
