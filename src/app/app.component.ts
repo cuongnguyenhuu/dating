@@ -58,11 +58,6 @@ Love you ❤️`
     this.audio1.src = "./assets/test.mp3";
     this.audio1.load();
     this.audio1.loop = true
-
-    this.audio2.src = "./assets/birthday.mp3";
-    this.audio2.load();
-    this.audio2.loop = true
-    throw new Error('Method not implemented.');
   }
   title = 'dating';
 
@@ -119,10 +114,15 @@ Love you ❤️`
       document.getElementById("text-welcome").style.display = "none"
       document.getElementById("text-birthday").style.display = "block"
       this.audio1.pause();
+
+      this.audio2.src = "./assets/birthday.mp3";
+      this.audio2.load();
+      this.audio2.loop = true
       this.audio2.play();
     } else {
       this.index = this.index + 1
       this.audio1.play()
+      this.audio2.play()
     }
   }
 }
